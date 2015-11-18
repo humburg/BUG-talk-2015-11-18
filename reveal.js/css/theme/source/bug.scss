@@ -1,0 +1,118 @@
+/**
+ * Solarized Dark theme for reveal.js.
+ * Author: Achim Staebler
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/league-gothic/league-gothic.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+html * {
+	color-profile: sRGB;
+	rendering-intent: auto;
+}
+
+// Solarized colors
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: $base1;
+$headingColor: $base2;
+$headingTextShadow: none;
+$heading1Size: 2.5em;
+$heading2Size: 2em;
+$backgroundColor: $base03;
+$linkColor: $blue;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: $magenta;
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal .title {
+    font-size: 3em;
+}
+
+.reveal .subtitle {
+    font-size: 2em;
+}
+
+.reveal .author {
+    font-size: 1.5em
+}
+
+.reveal .date {
+    font-size: 1em;
+}
+
+.reveal sup {
+    font-size: smaller;
+}
+
+.reveal .small h1{
+    font-size: $heading1Size - 0.5em;
+}
+
+.reveal .small h2{
+    font-size: $heading2Size - 0.5em;
+}
+
+.reveal .small h3{
+    font-size: 1em;
+}
+
+.reveal .small{
+    font-size: smaller;
+}
+
+div.twocolumn {
+  -moz-column-count: 2;
+  -moz-column-gap: 10px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 10px;
+  column-count: 2;
+  column-gap: 10px;
+}
+
+div.footnote {
+  font-size: 0.75em;
+  border-top-width: 1px;
+  border-top-style: solid;
+  margin-top: 1em;
+  padding-top: 0.5em;
+}
+
+.reveal section img {
+    background: rgba(255, 255, 255, 0.12);
+    border: none;
+    box-shadow: none
+}
